@@ -18,4 +18,17 @@ public class CalculTests
 
     }
 
+     [Theory]
+    [InlineData(2, 3, 6)]
+    public void Multiply_TwoNumbers_ReturnsProduct(int a,int b,int expected)
+    {
+        //Assert
+         Calcul c=new();
+        //Act
+         int actual= c.Multiply(a,b);
+         //Arrange
+         actual.Should().Be(6);
+
+    }
+
 }
